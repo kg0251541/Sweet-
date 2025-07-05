@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VJ Sweets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to right, #fefefe, #fad0c4);
+      color: #4e342e;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .header-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: auto;
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 7px 7px 7px black;
+      animation: slideInDown 1.2s ease-out forwards, colorShift 5s infinite alternate;
+      background: linear-gradient(90deg, #ff5722, #000000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #5d4037;
+      animation: glowText 2.5s infinite alternate ease-in-out;
+    }
+    @keyframes colorShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    @keyframes glowText {
+      0% { text-shadow: 0 0 5px #ffc107, 0 0 10px #ff9800; }
+      100% { text-shadow: 0 0 10px #ff5722, 0 0 20px #ff9800; }
+    }
+    nav {
+      background-color: #ffe0b2;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 15px;
+      padding: 10px;
+      text-decoration: none;
+      color: #6d4c41;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #d84315;
+      border-bottom: 2px solid #d84315;
+    }
+    .banner {
+      background: url('https://t3.ftcdn.net/jpg/04/84/94/58/360_F_484945880_yqcmUlx4PR22FnuLWEknDRji2RLiM8Nh.jpg') center/cover no-repeat;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #f6f1f1;
+      text-shadow: 10px 10px 10px rgba(10,10,0,20);
+      animation: popText 2s ease-out forwards;
+    }
+    @keyframes popText {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes slideInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #8e24aa;
+    }
+    .sweets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 30px 0;
+    }
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #6d4c41;
+    }
+    .card p {
+      font-size: 16px;
+      font-weight: bold;
+      color: #d84315;
+    }
+    .info {
+      background-color: #ffecb3;
+      padding: 40px 20px;
+    }
+    .info h2 {
+      color: #e65100;
+      font-size: 2rem;
+    }
+    .info p {
+      font-size: 16px;
+      color: #4e342e;
+    }
+    footer {
+      background-color: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" alt="VJ Sweets Logo" class="header-logo">
+    <h1>VJ Sweets</h1>
+    <p>Your One‑Stop Sweet Shop</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="banner" id="home">
+    Taste the Tradition of India
+  </div>
+
+  <section id="products" class="section">
+    <h2>Our Sweets</h2>
+    <div class="sweets">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Laddu_Sweet.JPG/1200px-Laddu_Sweet.JPG" alt="Laddu">
+        <h3>Laddu</h3>
+        <p>₹200/kg</p>
+      </div>
+      <div class="card">
+        <img src="https://www.nestleprofessional.in/sites/default/files/2022-07/Kaju-Katli.jpg" alt="Kaju Katli">
+        <h3>Kaju Katli</h3>
+        <p>₹250/kg</p>
+      </div>
+      <div class="card">
+        <img src="https://indiasweethouse.in/cdn/shop/files/BanarasiSoanPapdi.jpg?v=1685444011" alt="Soan Papdi">
+        <h3>Soan Papdi</h3>
+        <p>₹180/kg</p>
+      </div>
+      <div class="card">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/384944363/DN/MV/KT/144303146/gulab-jamun-desi-ghee.jpg" alt="Gulab Jamun">
+        <h3>Gulab Jamun</h3>
+        <p>₹220/kg</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="info">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: +916307858371</p>
+    <p>📧 Email: vjsweets@example.com</p>
+    <p>📍 Address: Tamkuhi Road , Kushinagar</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 VJ Sweets. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
